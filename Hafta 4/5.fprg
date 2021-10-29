@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 07:45:49 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzozOTozOSDDllM7MjkwNA=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzo0NTo0OSDDllM7MTszMDEw"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayac, enBuyukSayi, enKucukSayi, girdi" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <while expression="sayac &lt; 10">
+                <output expression="&quot;Say&#305; Girin: &quot;" newline="True"/>
+                <input variable="girdi"/>
+                <if expression="sayac == 0">
+                    <then>
+                        <assign variable="enBuyukSayi" expression="girdi"/>
+                        <assign variable="enKucukSayi" expression="girdi"/>
+                    </then>
+                    <else>
+                        <if expression="girdi &gt; enBuyukSayi">
+                            <then>
+                                <assign variable="enBuyukSayi" expression="girdi"/>
+                            </then>
+                            <else>
+                                <if expression="girdi &lt; enKucukSayi">
+                                    <then>
+                                        <assign variable="enKucukSayi" expression="girdi"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="sayac" expression="sayac + 1"/>
+            </while>
+            <output expression="&quot;Girilen &quot; &amp; sayac &amp; &quot; adet say&#305;dan en b&#252;y&#252;&#287;&#252; &quot; &amp; enBuyukSayi &amp; &quot;, en k&#252;&#231;&#252;&#287;&#252; &quot; &amp; enKucukSayi &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

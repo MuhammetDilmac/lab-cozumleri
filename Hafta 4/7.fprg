@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 07:58:11 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzo1MjoxMSDDllM7Mjg4OQ=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzo1ODoxMSDDllM7MTszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bolunmekIstenenSayi, bolenSayi, bolum" type="Integer" array="False" size=""/>
+            <assign variable="bolum" expression="0"/>
+            <output expression="&quot;B&#246;l&#252;nmek istenen say&#305;: &quot;" newline="True"/>
+            <input variable="bolunmekIstenenSayi"/>
+            <output expression="&quot;B&#246;len Say&#305;: &quot;" newline="True"/>
+            <input variable="bolenSayi"/>
+            <while expression="bolunmekIstenenSayi &gt;= bolenSayi">
+                <assign variable="bolum" expression="bolum + 1"/>
+                <assign variable="bolunmekIstenenSayi" expression="bolunmekIstenenSayi - bolenSayi"/>
+            </while>
+            <output expression="&quot;B&#246;l&#252;m: &quot; &amp; bolum &amp; &quot; Kalan: &quot; &amp; bolunmekIstenenSayi &amp; &quot;.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

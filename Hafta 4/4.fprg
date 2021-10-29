@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 07:36:36 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzozMDowOSDDllM7Mjg5Mg=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzozNjozNiDDllM7MTszMDA2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayac, girdi, pozitifSayisi, negatifSayisi" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="pozitifSayisi" expression="0"/>
+            <assign variable="negatifSayisi" expression="0"/>
+            <while expression="sayac &lt; 10">
+                <output expression="&quot;Say&#305; Giriniz: &quot;" newline="True"/>
+                <input variable="girdi"/>
+                <if expression="girdi &gt; 0">
+                    <then>
+                        <assign variable="pozitifSayisi" expression="pozitifSayisi + 1"/>
+                    </then>
+                    <else>
+                        <if expression="girdi &lt; 0">
+                            <then>
+                                <assign variable="negatifSayisi" expression="negatifSayisi + 1"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+                <assign variable="sayac" expression="sayac + 1"/>
+            </while>
+            <output expression="&quot;Girilen &quot; &amp; sayac &amp; &quot; say&#305;dan &quot; &amp; pozitifSayisi &amp; &quot; adeti pozitif, &quot; &amp; negatifSayisi &amp; &quot; adeti negatifdir.&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

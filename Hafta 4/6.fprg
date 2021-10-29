@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-10-29 07:52:08 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzo0NzoxOCDDllM7MjkwMA=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMC0yOTswNzo1MjowOCDDllM7MTszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="maas, parcaSayisi, katSayi, ucret" type="Integer" array="False" size=""/>
+            <output expression="&quot;Maa&#351;&#305;n&#305;z: &quot;" newline="True"/>
+            <input variable="maas"/>
+            <output expression="&quot;&#220;retti&#287;iniz Par&#231;a Say&#305;s&#305;: &quot;" newline="True"/>
+            <input variable="parcaSayisi"/>
+            <if expression="parcaSayisi &lt; 0">
+                <then>
+                    <output expression="&quot;0'dan az par&#231;a &#252;retemezsiniz.&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="parcaSayisi &lt; 10">
+                        <then>
+                            <assign variable="katSayi" expression="5000"/>
+                        </then>
+                        <else>
+                            <if expression="parcaSayisi &lt; 30">
+                                <then>
+                                    <assign variable="katSayi" expression="8000"/>
+                                </then>
+                                <else>
+                                    <assign variable="katSayi" expression="30000"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                    <assign variable="ucret" expression="maas + katSayi * parcaSayisi"/>
+                    <output expression="&quot;Alaca&#287;&#305;n&#305;z &#252;cret: &quot; &amp; ucret &amp; &quot;.&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
