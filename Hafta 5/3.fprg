@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-07 02:54:15 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMS0wNzswMjo0Nzo0MyDDllM7Mjg5MA=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMS0wNzswMjo1NDoxNSDDllM7MTsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="input, memory, sum, counter, avg" type="Integer" array="False" size=""/>
+            <assign variable="sum" expression="0"/>
+            <assign variable="counter" expression="0"/>
+            <output expression="&quot;Say&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="input"/>
+            <assign variable="memory" expression="input"/>
+            <assign variable="sum" expression="sum + input"/>
+            <assign variable="counter" expression="counter + 1"/>
+            <output expression="&quot;Say&#305; Giriniz: &quot;" newline="True"/>
+            <input variable="input"/>
+            <while expression="memory != input">
+                <assign variable="sum" expression="sum + input"/>
+                <assign variable="counter" expression="counter + 1"/>
+                <assign variable="memory" expression="input"/>
+                <output expression="&quot;Say&#305; Giriniz: &quot;" newline="True"/>
+                <input variable="input"/>
+            </while>
+            <assign variable="avg" expression="sum / counter"/>
+            <output expression="&quot;Girilen say&#305;lar&#305;n ortalamas&#305;: &quot; &amp; avg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

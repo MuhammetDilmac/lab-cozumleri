@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="muhammet"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-11-07 02:59:45 &#214;S"/>
+        <attribute name="created" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMS0wNzswMjo1NTozMSDDllM7Mjg4Ng=="/>
+        <attribute name="edited" value="bXVoYW1tZXQ7V09SS0xBTkQ7MjAyMS0xMS0wNzswMjo1OTo0NSDDllM7MTszMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="input, counterForTwo, counterForFive, counterForTen" type="Integer" array="False" size=""/>
+            <assign variable="counterForTwo" expression="0"/>
+            <assign variable="counterForFive" expression="0"/>
+            <assign variable="counterForTen" expression="0"/>
+            <do expression="input != -1">
+                <output expression="&quot;Say&#305; Giriniz: &quot;" newline="True"/>
+                <input variable="input"/>
+                <if expression="input != -1">
+                    <then>
+                        <if expression="input % 10 == 0">
+                            <then>
+                                <assign variable="counterForTen" expression="counterForTen + 1"/>
+                                <assign variable="counterForTwo" expression="counterForTwo + 1"/>
+                                <assign variable="counterForFive" expression="counterForFive + 1"/>
+                            </then>
+                            <else>
+                                <if expression="input % 5 == 0">
+                                    <then>
+                                        <assign variable="counterForFive" expression="counterForFive + 1"/>
+                                    </then>
+                                    <else>
+                                        <if expression="input % 2 == 0">
+                                            <then>
+                                                <assign variable="counterForTwo" expression="counterForTwo + 1"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </then>
+                    <else/>
+                </if>
+            </do>
+            <output expression="&quot;10'a b&#246;l&#252;nenlerin say&#305;s&#305;: &quot; &amp; counterForTen &amp; &quot; | 2'ye b&#246;l&#252;nenlerin say&#305;s&#305;: &quot; &amp; counterForTwo &amp; &quot; | 5'e b&#246;l&#252;nenlerin say&#305;s&#305;: &quot; &amp; counterForFive" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
